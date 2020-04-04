@@ -35,8 +35,10 @@ is_correct_data = True
 for i in range(matrix_size):
     row = input()
     items = row.split(" ")
-    if len(items) != matrix_size:
+    while len(items) != matrix_size:
         print("Incorrect data! Count of symbols must be same as matrix size!")
+        row = input()
+        items = row.split(" ")
 
     for j in range(len(items)):
         try:
